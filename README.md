@@ -1,7 +1,7 @@
 # FakeLanguageCompiler
 Components of a compiler for a made-up C-based language. 
 
-When prompted, provide the pathway to the text file you wish to generate text files for. The first text file generated is the “1 - Output_Lexical_Analyzer.txt” and contains the tokens and lexemes. The second file generated is the “2 - Output_Syntax_Analyzer.txt” and contains the tokens and lexemes with the production rules used for analyzing each token.
+Using the Main.exe, provide the pathway to the text file you wish to generate text files for, in this case I used SampleInput1.txt. The first text file generated is the “1 - Output_Lexical_Analyzer.txt” and contains the tokens and lexemes. The second file generated is the “2 - Output_Syntax_Analyzer.txt” and contains the tokens and lexemes with the production rules used for analyzing each token.
 
 Lexical Analyzer parses through the source code and outputs each lexeme and its appropriate token. It strips extraneous characters from source code, breaks up the source code into meaningful units called tokens and implements the Deterministic Finite State Machine to classify each of the lexemes with appropriate tokens.
 
