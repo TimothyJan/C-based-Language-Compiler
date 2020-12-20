@@ -1,0 +1,289 @@
+Lexeme: bool	Token: KEYWORD
+	 Statement -> <Assign> | <Declarative> 
+		 | if <Conditional> then <Statement> else <Statement> endif 
+		 | while <Conditional> do <Statement> whileend
+	 <Declarative> -> <Type> <ID> <MoreIds>
+	 <Type> -> bool | float | int 
+
+Lexeme: bool1	Token: IDENTIFIER
+
+Lexeme: ,	Token: SEPARATOR
+	 <MoreIds> -> , <Identifier> <MoreIds> | <empty> 
+
+Lexeme: bool2	Token: IDENTIFIER
+
+Lexeme: ,	Token: SEPARATOR
+	 <MoreIds> -> , <Identifier> <MoreIds> | <empty> 
+
+Lexeme: bool3	Token: IDENTIFIER
+
+Lexeme: ;	Token: SEPARATOR
+	 <MoreIds> -> , <Identifier> <MoreIds> | <empty> 
+	 <Empty> -> Epsilon 
+
+Lexeme: bool	Token: KEYWORD
+	 Statement -> <Assign> | <Declarative> 
+		 | if <Conditional> then <Statement> else <Statement> endif 
+		 | while <Conditional> do <Statement> whileend
+	 <Declarative> -> <Type> <ID> <MoreIds>
+	 <Type> -> bool | float | int 
+
+Lexeme: hey	Token: IDENTIFIER
+
+Lexeme: ;	Token: SEPARATOR
+	 <MoreIds> -> , <Identifier> <MoreIds> | <empty> 
+	 <Empty> -> Epsilon 
+
+Lexeme: hey	Token: IDENTIFIER
+	 Statement -> <Assign> | <Declarative> 
+		 | if <Conditional> then <Statement> else <Statement> endif 
+		 | while <Conditional> do <Statement> whileend
+	 <Assign> -> <Identifier> = <Expression> 
+
+Lexeme: =	Token: OPERATOR
+
+Lexeme: true	Token: KEYWORD
+	 <Expression> -> <Term> <ExpressionPrime> | <bool value>
+
+Lexeme: ;	Token: SEPARATOR
+
+Lexeme: hey	Token: IDENTIFIER
+	 Statement -> <Assign> | <Declarative> 
+		 | if <Conditional> then <Statement> else <Statement> endif 
+		 | while <Conditional> do <Statement> whileend
+	 <Assign> -> <Identifier> = <Expression> 
+
+Lexeme: =	Token: OPERATOR
+
+Lexeme: false	Token: KEYWORD
+	 <Expression> -> <Term> <ExpressionPrime> | <bool value>
+
+Lexeme: ;	Token: SEPARATOR
+
+Lexeme: int	Token: KEYWORD
+	 Statement -> <Assign> | <Declarative> 
+		 | if <Conditional> then <Statement> else <Statement> endif 
+		 | while <Conditional> do <Statement> whileend
+	 <Declarative> -> <Type> <ID> <MoreIds>
+	 <Type> -> bool | float | int 
+
+Lexeme: num	Token: IDENTIFIER
+
+Lexeme: ,	Token: SEPARATOR
+	 <MoreIds> -> , <Identifier> <MoreIds> | <empty> 
+
+Lexeme: nu2m	Token: IDENTIFIER
+
+Lexeme: ,	Token: SEPARATOR
+	 <MoreIds> -> , <Identifier> <MoreIds> | <empty> 
+
+Lexeme: large$	Token: IDENTIFIER
+
+Lexeme: ;	Token: SEPARATOR
+	 <MoreIds> -> , <Identifier> <MoreIds> | <empty> 
+	 <Empty> -> Epsilon 
+
+Lexeme: float	Token: KEYWORD
+	 Statement -> <Assign> | <Declarative> 
+		 | if <Conditional> then <Statement> else <Statement> endif 
+		 | while <Conditional> do <Statement> whileend
+	 <Declarative> -> <Type> <ID> <MoreIds>
+	 <Type> -> bool | float | int 
+
+Lexeme: num1	Token: IDENTIFIER
+
+Lexeme: ,	Token: SEPARATOR
+	 <MoreIds> -> , <Identifier> <MoreIds> | <empty> 
+
+Lexeme: num2	Token: IDENTIFIER
+
+Lexeme: ,	Token: SEPARATOR
+	 <MoreIds> -> , <Identifier> <MoreIds> | <empty> 
+
+Lexeme: num3	Token: IDENTIFIER
+
+Lexeme: ;	Token: SEPARATOR
+	 <MoreIds> -> , <Identifier> <MoreIds> | <empty> 
+	 <Empty> -> Epsilon 
+
+Lexeme: boolean	Token: IDENTIFIER
+	 Statement -> <Assign> | <Declarative> 
+		 | if <Conditional> then <Statement> else <Statement> endif 
+		 | while <Conditional> do <Statement> whileend
+	 <Assign> -> <Identifier> = <Expression> 
+
+Lexeme: error	Token: IDENTIFIER
+	 <Assign> -> <Identifier> = <Expression> 
+
+	 Error on line 11
+Lexeme: num	Token: IDENTIFIER
+	 Statement -> <Assign> | <Declarative> 
+		 | if <Conditional> then <Statement> else <Statement> endif 
+		 | while <Conditional> do <Statement> whileend
+	 <Assign> -> <Identifier> = <Expression> 
+
+Lexeme: =	Token: OPERATOR
+
+Lexeme: 0	Token: INTEGER
+	 <Expression> -> <Term> <ExpressionPrime> | <bool value>
+	 <Term> -> <Factor> <TermPrime> 
+	 <Factor> -> - ( <Expression> ) | <ID> | <num> 
+
+Lexeme: ;	Token: SEPARATOR
+	 <TermPrime> -> * <Factor> <TermPrime> | / <Factor> <TermPrime> | <Empty> 
+	 <Empty> -> Epsilon 
+	 <ExpressionPrime> -> + <Term> <ExpressionPrime> | - <Term> <ExpressionPrime> | <Term> 
+	 <Empty> -> Epsilon 
+
+Lexeme: nu2m	Token: IDENTIFIER
+	 Statement -> <Assign> | <Declarative> 
+		 | if <Conditional> then <Statement> else <Statement> endif 
+		 | while <Conditional> do <Statement> whileend
+	 <Assign> -> <Identifier> = <Expression> 
+
+Lexeme: =	Token: OPERATOR
+
+Lexeme: 15	Token: INTEGER
+	 <Expression> -> <Term> <ExpressionPrime> | <bool value>
+	 <Term> -> <Factor> <TermPrime> 
+	 <Factor> -> - ( <Expression> ) | <ID> | <num> 
+
+Lexeme: ;	Token: SEPARATOR
+	 <TermPrime> -> * <Factor> <TermPrime> | / <Factor> <TermPrime> | <Empty> 
+	 <Empty> -> Epsilon 
+	 <ExpressionPrime> -> + <Term> <ExpressionPrime> | - <Term> <ExpressionPrime> | <Term> 
+	 <Empty> -> Epsilon 
+
+Lexeme: z	Token: IDENTIFIER
+	 Statement -> <Assign> | <Declarative> 
+		 | if <Conditional> then <Statement> else <Statement> endif 
+		 | while <Conditional> do <Statement> whileend
+	 <Assign> -> <Identifier> = <Expression> 
+
+Lexeme: =	Token: OPERATOR
+
+Lexeme: c	Token: IDENTIFIER
+	 <Expression> -> <Term> <ExpressionPrime> | <bool value>
+	 <Term> -> <Factor> <TermPrime> 
+	 <Factor> -> - ( <Expression> ) | <ID> | <num> 
+
+Lexeme: +	Token: OPERATOR
+	 <TermPrime> -> * <Factor> <TermPrime> | / <Factor> <TermPrime> | <Empty> 
+	 <Empty> -> Epsilon 
+	 <ExpressionPrime> -> + <Term> <ExpressionPrime> | - <Term> <ExpressionPrime> | <Term> 
+
+Lexeme: d	Token: IDENTIFIER
+	 <Term> -> <Factor> <TermPrime> 
+	 <Factor> -> - ( <Expression> ) | <ID> | <num> 
+
+Lexeme: ;	Token: SEPARATOR
+	 <TermPrime> -> * <Factor> <TermPrime> | / <Factor> <TermPrime> | <Empty> 
+	 <Empty> -> Epsilon 
+	 <ExpressionPrime> -> + <Term> <ExpressionPrime> | - <Term> <ExpressionPrime> | <Term> 
+	 <Empty> -> Epsilon 
+
+Lexeme: a	Token: IDENTIFIER
+	 Statement -> <Assign> | <Declarative> 
+		 | if <Conditional> then <Statement> else <Statement> endif 
+		 | while <Conditional> do <Statement> whileend
+	 <Assign> -> <Identifier> = <Expression> 
+
+Lexeme: =	Token: OPERATOR
+
+Lexeme: e	Token: IDENTIFIER
+	 <Expression> -> <Term> <ExpressionPrime> | <bool value>
+	 <Term> -> <Factor> <TermPrime> 
+	 <Factor> -> - ( <Expression> ) | <ID> | <num> 
+
+Lexeme: -	Token: OPERATOR
+	 <TermPrime> -> * <Factor> <TermPrime> | / <Factor> <TermPrime> | <Empty> 
+	 <Empty> -> Epsilon 
+	 <ExpressionPrime> -> + <Term> <ExpressionPrime> | - <Term> <ExpressionPrime> | <Term> 
+
+Lexeme: f	Token: IDENTIFIER
+	 <Term> -> <Factor> <TermPrime> 
+	 <Factor> -> - ( <Expression> ) | <ID> | <num> 
+
+Lexeme: ;	Token: SEPARATOR
+	 <TermPrime> -> * <Factor> <TermPrime> | / <Factor> <TermPrime> | <Empty> 
+	 <Empty> -> Epsilon 
+	 <ExpressionPrime> -> + <Term> <ExpressionPrime> | - <Term> <ExpressionPrime> | <Term> 
+	 <Empty> -> Epsilon 
+
+Lexeme: b	Token: IDENTIFIER
+	 Statement -> <Assign> | <Declarative> 
+		 | if <Conditional> then <Statement> else <Statement> endif 
+		 | while <Conditional> do <Statement> whileend
+	 <Assign> -> <Identifier> = <Expression> 
+
+Lexeme: =	Token: OPERATOR
+
+Lexeme: g	Token: IDENTIFIER
+	 <Expression> -> <Term> <ExpressionPrime> | <bool value>
+	 <Term> -> <Factor> <TermPrime> 
+	 <Factor> -> - ( <Expression> ) | <ID> | <num> 
+
+Lexeme: *	Token: OPERATOR
+	 <TermPrime> -> * <Factor> <TermPrime> | / <Factor> <TermPrime> | <Empty> 
+
+Lexeme: n	Token: IDENTIFIER
+	 <Factor> -> - ( <Expression> ) | <ID> | <num> 
+
+Lexeme: ;	Token: SEPARATOR
+	 <TermPrime> -> * <Factor> <TermPrime> | / <Factor> <TermPrime> | <Empty> 
+	 <Empty> -> Epsilon 
+	 <ExpressionPrime> -> + <Term> <ExpressionPrime> | - <Term> <ExpressionPrime> | <Term> 
+	 <Empty> -> Epsilon 
+
+Lexeme: z	Token: IDENTIFIER
+	 Statement -> <Assign> | <Declarative> 
+		 | if <Conditional> then <Statement> else <Statement> endif 
+		 | while <Conditional> do <Statement> whileend
+	 <Assign> -> <Identifier> = <Expression> 
+
+Lexeme: =	Token: OPERATOR
+
+Lexeme: (	Token: SEPARATOR
+	 <Expression> -> <Term> <ExpressionPrime> | <bool value>
+	 <Term> -> <Factor> <TermPrime> 
+	 <Factor> -> - ( <Expression> ) | <ID> | <num> 
+
+Lexeme: x	Token: IDENTIFIER
+	 <Expression> -> <Term> <ExpressionPrime> | <bool value>
+	 <Term> -> <Factor> <TermPrime> 
+	 <Factor> -> - ( <Expression> ) | <ID> | <num> 
+
+Lexeme: +	Token: OPERATOR
+	 <TermPrime> -> * <Factor> <TermPrime> | / <Factor> <TermPrime> | <Empty> 
+	 <Empty> -> Epsilon 
+	 <ExpressionPrime> -> + <Term> <ExpressionPrime> | - <Term> <ExpressionPrime> | <Term> 
+
+Lexeme: y	Token: IDENTIFIER
+	 <Term> -> <Factor> <TermPrime> 
+	 <Factor> -> - ( <Expression> ) | <ID> | <num> 
+
+Lexeme: )	Token: SEPARATOR
+	 <TermPrime> -> * <Factor> <TermPrime> | / <Factor> <TermPrime> | <Empty> 
+	 <Empty> -> Epsilon 
+	 <ExpressionPrime> -> + <Term> <ExpressionPrime> | - <Term> <ExpressionPrime> | <Term> 
+	 <Empty> -> Epsilon 
+
+Lexeme: *	Token: OPERATOR
+	 <TermPrime> -> * <Factor> <TermPrime> | / <Factor> <TermPrime> | <Empty> 
+
+Lexeme: i	Token: IDENTIFIER
+	 <Factor> -> - ( <Expression> ) | <ID> | <num> 
+
+Lexeme: ;	Token: SEPARATOR
+	 <TermPrime> -> * <Factor> <TermPrime> | / <Factor> <TermPrime> | <Empty> 
+	 <Empty> -> Epsilon 
+	 <ExpressionPrime> -> + <Term> <ExpressionPrime> | - <Term> <ExpressionPrime> | <Term> 
+	 <Empty> -> Epsilon 
+
+Lexeme: x	Token: IDENTIFIER
+	 Statement -> <Assign> | <Declarative> 
+		 | if <Conditional> then <Statement> else <Statement> endif 
+		 | while <Conditional> do <Statement> whileend
+	 <Assign> -> <Identifier> = <Expression> 
+
+	 Error on line 19

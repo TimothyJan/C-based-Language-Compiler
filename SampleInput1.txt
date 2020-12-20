@@ -1,0 +1,21 @@
+
+!This is a comment!
+
+bool bool1, bool2, bool3;
+bool hey;
+hey = true;
+hey = false;
+
+int num, nu2m, large$;
+float num1, num2, num3;
+boolean error;	!only accepts "bool" as type, not "boolean"!
+num = 0;
+nu2m = 15;
+
+z=c+ d;
+a=e-f;
+b=g*n;
+z = ( x +y) * i;
+x+	!error!
+
+!This is also a comment!
