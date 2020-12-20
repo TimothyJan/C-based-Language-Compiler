@@ -5,5 +5,4 @@ Using the Main.exe, provide the pathway to the text file you wish to generate te
 
 Lexical Analyzer parses through the source code and outputs each lexeme and its appropriate token. It strips extraneous characters from source code, breaks up the source code into meaningful units called tokens and implements the Deterministic Finite State Machine to classify each of the lexemes with appropriate tokens.
 
-Syntax Analyzer parses through source code to determine if it is syntactically correct. With the grammar given, I rewrote the grammar to remove any left recursion and ambiguity. I created a predictive table with the First and Follow sets of the rewritten grammar. The Top-Down Syntax Analyzer parses through the source code, uses a stack and prints out the tokens/lexemes and all the production rules used for analyzing the tokens. 
-
+Syntax Analyzer parses through source code to determine if it is syntactically correct. With the grammar given, I rewrote the grammar to remove any left recursion and ambiguity. I created a predictive table with the First and Follow sets of the rewritten grammar. The Top-Down Syntax Analyzer parses through the source code, uses a stack and prints out the tokens/lexemes and all the production rules used for analyzing the tokens.
