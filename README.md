@@ -1,5 +1,5 @@
 # FakeLanguageCompiler
-Components of a compiler for a made-up C-based language. 
+Components of a compiler for a made-up C-based language. Final Project for CPSC 323 Compilers and Languages
 
 Using the Main.exe, provide the pathway to the text file you wish to generate text files for, in this case I used SampleInput1.txt. The first text file generated is the “1 - Output_Lexical_Analyzer.txt” and contains the tokens and lexemes. The second file generated is the “2 - Output_Syntax_Analyzer.txt” and contains the tokens and lexemes with the production rules used for analyzing each token.
 
